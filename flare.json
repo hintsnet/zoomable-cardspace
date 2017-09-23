@@ -1,0 +1,38 @@
+{
+  "name": "5040",
+  "children": [
+    {
+      "name": "210",
+      "children": [
+        {
+          "name": "30",
+          "children": [
+            {"name": "3", "size": 100},
+            {"name": "5", "size": 100},
+            {"name": "2", "size": 100}
+          ]
+        },
+        {"name": "7", "size": 100}
+      ]
+    },
+    {
+      "name": "315",
+      "children": [
+        {
+          "name": "63",
+          "children": [
+            {"name": "7", "size": 100},
+            {
+              "name": "9",
+              "children": [
+                {"name": "3", "size": 50},
+                {"name": "3", "size": 50}
+              ]
+            }
+          ]
+        },
+        {"name": "5", "size": 100}
+      ]
+    }
+  ]
+}
