@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <meta charset="utf-8" />
+ <label>您的名字：</label>
+ <input id="uname" />
+ <button onclick="ws.send(document.getElementById('uname').value);">发送信息</button>
+ <button onclick="ws.close()">关闭</button>
+ <pre style="padding:5px; border-top:1px dashed gray" id="log"></pre>
+ <script>
+   // helper function: log message to screen
+   function log(msg) {
+     document.getElementById('log').textContent += msg + '\n';
+   }
+   // setup websocket with callbacks
+   var ws = new WebSocket('wss://192.168.56.101:8443/');
+   ws.onopen = function() {
+     log('已连接服务端');
+   };
+   ws.onclose = function() {
+     log('已从服务端断开');
+   };
+   ws.onmessage = function(event) {
+     log('服务端回应：' + event.data);
+   };
+</script>
